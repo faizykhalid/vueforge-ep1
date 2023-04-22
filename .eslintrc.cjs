@@ -11,6 +11,7 @@ module.exports = {
     "eslint:recommended",
     "@vue/eslint-config-typescript/recommended",
     "@vue/eslint-config-prettier",
+    "prettier",
   ],
   rules: {
     "vue/multi-word-component-names": ["error", { ignores: ["index"] }],
