@@ -12,9 +12,13 @@
     "type-check": "vue-tsc --noEmit -p tsconfig.vitest.json --composite false",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore"
   },
+  "husky": {
+    "hooks": { "pre-commit": "npm run lint" }
+  },
   "dependencies": {
     "@vue/apollo-composable": "^4.0.0-beta.4",
     "graphql-tag": "^2.12.6",
+    "husky": "^8.0.3",
     "lodash-es": "^4.17.21",
     "unplugin-vue-components": "^0.20.1",
     "uuid": "^8.3.2",
