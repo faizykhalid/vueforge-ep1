@@ -4,7 +4,6 @@ import {
   CardTitle as KCardTitle,
 } from "@progress/kendo-vue-layout";
 import type { Board } from "@/types";
-import AppImage from "./AppImage.vue";
 defineProps<{
   board: Board;
 }>();

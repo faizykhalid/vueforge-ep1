@@ -27,11 +27,17 @@ const boards = ref<Partial<Board>[]>([
     },
   },
 ]);
+function createBoard() {
+  const lastIndex = boards.value.length - 1;
+  boards.value.splice(lastIndex, 0, boards.value[lastIndex]);
+}
 </script>
 <template>
   <h1 class="text-3xl">Boards</h1>
-  <board-card v-for="board in boards" :key="board.id" :board="board" />
-  <!-- <button class="text-gray-500" @click="createBoard(newBoardTemplate)">
-    <span>New Board +</span>
-  </button> -->
+  <div class="flex">
+    <board-card v-for="board in boards" :key="board.id" :board="board" />
+    <button class="text-gray-500" @click="createBoard()">
+      <span>New Board &#43;</span>
+    </button>
+  </div>
 </template>
